@@ -1,0 +1,15 @@
+<div class="notification">
+  <div class="train">
+    <p>Don't miss the train.</p>
+  </div>
+  <div class="closetab">
+    <i class="fas fa-times" id="closing"></i>
+  </div>
+</div>
+
+
+<script>
+  document.querySelector("#closing").addEventListener("click", (e) => {
+    document.querySelector(".notification").classList.add("hidden");
+  });
+</script>

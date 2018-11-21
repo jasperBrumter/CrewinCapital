@@ -1,0 +1,18 @@
+.navigationbar {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  li {
+    padding: 15px;
+    color: white;
+    font-weight: lighter;
+    font-family: "Raleway", "sans-serif";
+    font-size: 15px;
+    letter-spacing: 3px;
+    &:hover {
+      color: $primarygold;
+    }
+  }
+}

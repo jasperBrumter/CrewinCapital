@@ -1,2 +1,57 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<% provide(:title, "Home") %>
+
+<div class="menupage hidden">
+  <div class="navigationbar">
+    <ul class="list-inline menulist">
+      <li class="togglemenu">CLOSE</li>
+    </ul>
+  </div>
+
+  <div class="full">
+    <div class="hiddenmenu">
+      <div class="hiddenmenuoption">WELCOME</div>
+      <div class="hiddenmenuoption">THE CREW</div>
+      <div class="hiddenmenuoption">SERVICES</div>
+      <div class="hiddenmenuoption">TESTIMONIALS</div>
+      <div class="hiddenmenuoption">CONTACT</div>
+    </div>
+  </div>
+</div>
+
+<div class="restofpage">
+  <div class="firstpage parallax">
+    <%= render "shared/navigationbar" %>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+          <div class="maintitle"><center>CREWIN.</center></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+          <div class="mainsubtitle"><center>WE MOVE TALENT</center></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+          <div class="maintext"><center><p>“Building relationships while providing new opportunities for growth to candidates and a better fit for Partners.”</p></center></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+
+  document.querySelectorAll(".togglemenu").forEach((x) => {
+    x.addEventListener("click", (e) => {
+      document.querySelector(".restofpage").classList.toggle("hidden");
+      document.querySelector(".menupage").classList.toggle("hidden");
+    });
+  })
+
+
+
+</script>
